@@ -1,0 +1,254 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.card h2 {
+    color: #2575fc;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Currency Converter Styles */
+.converter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#swap-btn {
+    background-color: #f5f7fa;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 1rem;
+}
+
+#swap-btn:hover {
+    background-color: #e4e7eb;
+    transform: rotate(180deg);
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2575fc;
+}
+
+#convert-btn {
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#convert-btn:hover {
+    background-color: #1a5fc8;
+}
+
+#exchange-rate {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* World Time Styles */
+.time-container, .weather-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    flex: 1;
+}
+
+.search-container button {
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #1a5fc8;
+}
+
+#time-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.time-card {
+    background-color: #f5f7fa;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.time-card h3 {
+    color: #2575fc;
+    font-size: 1.2rem;
+}
+
+.time-card .time {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.time-card .date {
+    color: #555;
+}
+
+/* Weather Styles */
+#weather-result {
+    background-color: #f5f7fa;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.weather-temp {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.weather-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.weather-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-detail i {
+    color: #2575fc;
+    font-size: 1.2rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .converter-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #swap-btn {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+
+    #swap-btn:hover {
+        transform: rotate(270deg);
+    }
+
+    .weather-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

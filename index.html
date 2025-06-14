@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Exchange - Currency, Time & Weather</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-globe"></i> Global Exchange</h1>
+            <p>Currency Exchange | World Time | Weather</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="currency-converter" class="card">
+            <h2><i class="fas fa-money-bill-wave"></i> Currency Converter</h2>
+            <div class="converter-container">
+                <div class="input-group">
+                    <input type="number" id="amount" value="1" min="0">
+                    <select id="from-currency">
+                        <!-- Will be populated with JavaScript -->
+                    </select>
+                </div>
+                <button id="swap-btn"><i class="fas fa-exchange-alt"></i></button>
+                <div class="input-group">
+                    <input type="number" id="result" disabled>
+                    <select id="to-currency">
+                        <!-- Will be populated with JavaScript -->
+                    </select>
+                </div>
+            </div>
+            <button id="convert-btn">Convert</button>
+            <div id="exchange-rate"></div>
+        </section>
+
+        <section id="world-time" class="card">
+            <h2><i class="fas fa-clock"></i> World Time</h2>
+            <div class="time-container">
+                <div class="search-container">
+                    <input type="text" id="time-search" placeholder="Search for a city or country...">
+                    <button id="time-search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="time-results">
+                    <!-- Will be populated with JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="weather" class="card">
+            <h2><i class="fas fa-cloud-sun"></i> Weather</h2>
+            <div class="weather-container">
+                <div class="search-container">
+                    <input type="text" id="weather-search" placeholder="Search for a city...">
+                    <button id="weather-search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="weather-result">
+                    <!-- Will be populated with JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Global Exchange. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
